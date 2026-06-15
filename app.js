@@ -34,7 +34,25 @@ function actualizarInfoCancion() {
   tituloCancion.textContent= canciones[indiceCancionActual].titulo
   nombreArtiste.textContent= canciones[indiceCancionActual].nombre
   cancion.src = canciones[indiceCancionActual].fuente
-  cancion.addEventListener('loadeddata', function() {})
+  cancion.addEventListener('loadeddata', function(){})
 };
 
+botonReproducirPausar.addEventListener('click', reproducirPausar);
+
+function reproducirPausar() {
+  
+
+  if (cancion.paused) {
+    reproducirCancion()
+  }else {
+    pausarCancion()
+  }
+}
+
+function reproducirCancion() {
+  cancion.play()
+}
+function pausarCancion() {
+  cancion.pause()
+}
 actualizarInfoCancion()
