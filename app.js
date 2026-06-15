@@ -10,4 +10,22 @@ const botonReproducirPausar = document.querySelector(".controles button.boton-re
 const botonAtras = document.querySelector(".controles button.atras")
 const botonAdelante = document.querySelector(".controles button.adelante")
 
-// console.log(botonReproducirPausar)
+const canciones = [
+  {
+    titulo:'Me Curare (Bachata Remix DJC)',
+    nombre:'Justin Quiles',
+    fuente:'music/Justin Quiles - Me Curare (Bachata Remix DJC).mp3'
+  },
+  {
+    titulo:'Cuerpo Sensual',
+    nombre:'Bolivar Peralta',
+    fuente:'music/Cuerpo Sensual.mp3'
+  },
+  {
+    titulo:'Atlantico',
+    nombre:'Salsa',
+    fuente:'music/Atlantico.mp3'
+  },
+]
+
+let indiceCancionActual = 0;
