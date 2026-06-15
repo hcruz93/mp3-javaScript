@@ -28,4 +28,13 @@ const canciones = [
   },
 ]
 
-let indiceCancionActual = 0;
+let indiceCancionActual = 1;
+
+function actualizarInfoCancion() {
+  tituloCancion.textContent= canciones[indiceCancionActual].titulo
+  nombreArtiste.textContent= canciones[indiceCancionActual].nombre
+  cancion.src = canciones[indiceCancionActual].fuente
+  cancion.addEventListener('loadeddata', function() {})
+};
+
+actualizarInfoCancion()
