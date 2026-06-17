@@ -77,7 +77,13 @@ progreso.addEventListener('input',function(){
 botonAdelante.addEventListener('click', ()=>{
   indiceCancionActual = (indiceCancionActual + 1) % canciones.length
   actualizarInfoCancion()
-  reproducirCancion(|)
+  reproducirCancion()
+})
+
+botonAtras.addEventListener('click', ()=>{
+  indiceCancionActual = (indiceCancionActual -1 + canciones.length) % canciones.length
+  actualizarInfoCancion()
+  reproducirCancion()
 })
 
 actualizarInfoCancion()
