@@ -70,8 +70,14 @@ progreso.addEventListener('input',function(){
   cancion.currentTime = progreso.value
 })
 
-progreso.addEventListener('change',function(){
-  reproducirCancion()
+// progreso.addEventListener('change',function(){
+//   reproducirCancion()
+// })
+
+botonAdelante.addEventListener('click', ()=>{
+  indiceCancionActual = (indiceCancionActual + 1) % canciones.length
+  actualizarInfoCancion()
+  reproducirCancion(|)
 })
 
 actualizarInfoCancion()
